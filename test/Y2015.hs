@@ -8,6 +8,7 @@ import Y2015.Day01 (basement, calculateFloor)
 import Y2015.Day02 (presentArea, presentAreaSum, presentRibbon, shortestPerimeter)
 import Y2015.Day03 (multiDeliveries, roboDeliveries)
 import Y2015.Day04 (minMd5, minMd56)
+import Y2015.Day05 (niceWord, niceWords, niceWord2, niceWords2)
 
 tests2015 :: TestTree
 tests2015 =
@@ -44,6 +45,18 @@ tests2015 =
         assertEqual "pqrstuv" 1048970 $ minMd5 "pqrstuv"
         assertEqual "iwrupvqb" 346386 $ minMd5 "iwrupvqb"
         -- part 2
-        assertEqual "iwrupvqb 2" 9958218 $ minMd56 "iwrupvqb"
+        assertEqual "iwrupvqb 2" 9958218 $ minMd56 "iwrupvqb",
+      testCase "2015-05" $ do
+        assertEqual "ugknbfddgicrmopn" True $ niceWord "ugknbfddgicrmopn"
+        assertEqual "aaa" True $ niceWord "aaa"
+        assertEqual "jchzalrnumimnmhp" False $ niceWord "jchzalrnumimnmhp"
+        assertEqual "haegwjzuvuyypxyu" False $ niceWord "haegwjzuvuyypxyu"
+        assertEqual "dvszwmarrgswjxmb" False $ niceWord "dvszwmarrgswjxmb"
+        input <- getInput "2015" "05"
+        assertEqual "part 1" 258 $ niceWords input
+        -- part 2
+        assertEqual "2 - qjhvhtzxzqqjkmpb" True $ niceWord2 "qjhvhtzxzqqjkmpb"
+        assertEqual "2 - uurcxstgmygtbstg" False $ niceWord2 "uurcxstgmygtbstg"
+        assertEqual "part 2" 53 $ niceWords2 input
     ]
 
