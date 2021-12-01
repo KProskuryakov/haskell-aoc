@@ -1,52 +1,90 @@
-cabal-version:      2.4
-name:               haskell-aoc
-version:            0.1.0.0
+cabal-version: 1.12
 
--- A short (one-line) description of the package.
--- synopsis:
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
 
--- A longer description of the package.
--- description:
+name:           haskell-aoc
+version:        0.0.1
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
 
--- A URL where users can report bugs.
--- bug-reports:
+executable Y2015
+  main-is: Main.hs
+  other-modules:
+      Lib
+      Y2015.Day01
+      Y2015.Day02
+      Y2015.Day03
+      Y2015.Day04
+      Y2015.Day05
+      Y2021.Day01
+      Paths_haskell_aoc
+  hs-source-dirs:
+      src
+  default-extensions:
+      NoImplicitPrelude, OverloadedStrings, TupleSections, BangPatterns
+  build-depends:
+      base
+    , bytestring
+    , classy-prelude
+    , cryptohash-md5
+    , text
+    , vector
+  default-language: Haskell2010
 
--- The license under which the package is released.
--- license:
-author:             kproskuryakov
-maintainer:         2399977+KProskuryakov@users.noreply.github.com
-
--- A copyright notice.
--- copyright:
--- category:
-extra-source-files:
-    CHANGELOG.md
-    README.md
-
-library
-    build-depends:
-        base ^>=4.14.3.0,
-        classy-prelude ^>=1.5.0.1,
-        text ^>=1.2.5.0,
-        bytestring ^>=0.11.1.0,
-        vector ^>=0.12.3.1,
-        cryptohash-md5 ^>=0.11.101.0
-    default-extensions: NoImplicitPrelude, OverloadedStrings
-    hs-source-dirs:   src
-    default-language: Haskell2010
-    exposed-modules: Lib, Y2015.Day01, Y2015.Day02, Y2015.Day03, Y2015.Day04, Y2015.Day05
+executable Y2021
+  main-is: Main.hs
+  other-modules:
+      Lib
+      Y2015.Day01
+      Y2015.Day02
+      Y2015.Day03
+      Y2015.Day04
+      Y2015.Day05
+      Y2021.Day01
+      Paths_haskell_aoc
+  hs-source-dirs:
+      src
+  default-extensions:
+      NoImplicitPrelude, OverloadedStrings, TupleSections, BangPatterns
+  build-depends:
+      base
+    , bytestring
+    , classy-prelude
+    , cryptohash-md5
+    , text
+    , vector
+  default-language: Haskell2010
 
 test-suite spec
-    main-is:          Spec.hs
-    other-modules: Y2015
-    build-depends:
-        base ^>=4.14.3.0,
-        haskell-aoc,
-        classy-prelude ^>=1.5.0.1,
-        tasty ^>=1.4.2.1,
-        tasty-hunit ^>=0.10.0.3
-    type: exitcode-stdio-1.0
-    default-extensions: NoImplicitPrelude, OverloadedStrings
-    hs-source-dirs:   test
-    default-language: Haskell2010
-
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Lib
+      Main
+      Y2015.Day01
+      Y2015.Day02
+      Y2015.Day03
+      Y2015.Day04
+      Y2015.Day05
+      Y2021.Day01
+      Y2015
+      Y2021
+      Paths_haskell_aoc
+  hs-source-dirs:
+      src
+      test
+  default-extensions:
+      NoImplicitPrelude, OverloadedStrings, TupleSections, BangPatterns
+  build-depends:
+      base
+    , bytestring
+    , classy-prelude
+    , cryptohash-md5
+    , tasty
+    , tasty-hunit
+    , text
+    , vector
+  default-language: Haskell2010

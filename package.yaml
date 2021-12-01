@@ -1,0 +1,30 @@
+name: haskell-aoc
+version: 0.0.1
+
+default-extensions: NoImplicitPrelude, OverloadedStrings, TupleSections, BangPatterns
+
+dependencies:
+  - base
+  - classy-prelude
+  - text
+  - bytestring
+  - vector
+  - cryptohash-md5
+
+source-dirs: src
+
+executables:
+  Y2015:
+    main: Main.hs
+  Y2021:
+    main: Main.hs
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs:
+      - src
+      - test
+    dependencies:
+      - tasty
+      - tasty-hunit
