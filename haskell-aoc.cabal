@@ -20,6 +20,7 @@ executable Y2015
       Y2015.Day04
       Y2015.Day05
       Y2021.Day01
+      Y2021.Day02
       Paths_haskell_aoc
   hs-source-dirs:
       src
@@ -44,6 +45,7 @@ executable Y2021
       Y2015.Day04
       Y2015.Day05
       Y2021.Day01
+      Y2021.Day02
       Paths_haskell_aoc
   hs-source-dirs:
       src
@@ -70,6 +72,7 @@ test-suite spec
       Y2015.Day04
       Y2015.Day05
       Y2021.Day01
+      Y2021.Day02
       Y2015
       Y2021
       Paths_haskell_aoc
